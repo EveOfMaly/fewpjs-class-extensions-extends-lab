@@ -19,11 +19,9 @@ class Polygon {
 
 class Triangle extends Polygon{
 
-    isValid() {
+get isValid() {
         if (this.sideCounter !== 3) return false;
         if (!Array.isArray(this.sides)) return false;
-
-       
         let sideA = this.sides[0]
         let sideB = this.sides[1]
         let sideC = this.sides[2]
@@ -36,7 +34,7 @@ class Triangle extends Polygon{
 
 class Square extends Polygon {
 
-    isValid() {
+    get isValid() {
         
         if (this.sideCounter !== 4) return false 
         if (!Array.isArray(this.sides)) return false
@@ -47,13 +45,12 @@ class Square extends Polygon {
         let sideC = this.sides[2]
         let sideD = this.sides[3]
 
-
-         return ((sideA === sideB) && (sideA === sideC) && (side1 === sideD))
+         return ((sideA === sideB) && (sideA === sideC) && (sideA === sideD))
 
     }
 
 
-    area(){
+   get area(){
         let sideA = this.sides[0]
         let sideB = this.sides[1]
 
@@ -68,8 +65,8 @@ class Square extends Polygon {
 
 
 
-triangle = new Triangle( [ 5, 5, 5 ] )
-triangle2 = new Triangle( [ 15, 10, 1 ] )
+// triangle = new Triangle( [ 5, 5, 5 ] )
+// triangle2 = new Triangle( [ 15, 10, 1 ] )
 
 
 // if (this.array[0] + this.array[1]) > this.array[2]) {
